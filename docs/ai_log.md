@@ -14,4 +14,5 @@ Commits made with AI help carry a `Co-Authored-By: Claude` trailer.
 - **Checked:** all 30 tests pass; replaying the 26 Oct feasibility responses through `collect` gives the same counts and pair checks as the 26 Oct report (Amsterdam 3,326 / Copenhagen 2,024 lower-bound core segments, PAIR_VALID).
 - **Also produced (issues #2, #3):** `bikecollect/db.py` (five-table SQLite schema, foreign keys and CHECK constraints enforced) with 2 tests; `bikecollect/load.py` (loads `data/<run_id>/` runs, verifies raw-file hashes, idempotent, refuses feasibility runs) with 4 tests. 36 tests in total.
 - **Checked (loader):** loading the replayed 26 Oct pair gives 7,711 / 4,841 eligible ways and 421.1 / 381.0 km core length, matching the collector; 43 / 27 query-matched ways excluded by the classification rules are logged as warnings.
+- **Pair 1:** Claude wrote a run script; I ran it on my Mac (Python 3.12.14). Run `20261028T065624Z` on overpass-api.de: PAIR_VALID, 3,328 / 2,024 lower-bound core segments, 421.15 / 381.0 km; loaded into SQLite (12,871 facilities). Claude then saved the procedure as `scripts/run_pair.sh` for pairs 2-4.
 - **My review / changes:** _to fill in_

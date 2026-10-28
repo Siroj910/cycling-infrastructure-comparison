@@ -18,6 +18,9 @@ python -m pytest -q           # all tests should pass before any collection
 python -m bikecollect.collect --pair 1     # scheduled days: 28 Oct, 31 Oct, 4 Nov, 7 Nov (pairs 1-4)
 ```
 
+Or run the whole collection day (pull, tests, collect, load, commit, push) with `scripts/run_pair.sh <N>`;
+it stops before collecting if any test fails or the code has uncommitted changes.
+
 Writes `data/<run_id>/`: `raw_<city>_<service>.json.gz`, `provenance.json` (full queries, query and response
 SHA-256, timestamps, every attempt including failures, C1-C7 / P1-P6 results, code commit) and `report.md`.
 Exit code 0 = valid pair, 1 = no valid pair. Failed runs are kept and committed: they are evidence too.
