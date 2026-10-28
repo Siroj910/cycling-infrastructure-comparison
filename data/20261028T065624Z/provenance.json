@@ -1,0 +1,194 @@
+{
+  "run_id": "20261028T065624Z",
+  "purpose": "ASSESSED POST-APPROVAL COLLECTION",
+  "pair_no": 1,
+  "approval": "Approved 27 Oct 2026 (Version 3 + Addendum 26 Oct 2026)",
+  "started_utc": "2026-10-28T06:56:24Z",
+  "finished_utc": "2026-10-28T06:57:34Z",
+  "pair_valid": true,
+  "valid_endpoint": "https://overpass-api.de/api/interpreter",
+  "code": {
+    "git_commit": "ea6edc92b14e29a9b0ba508f1ee1bdca3bf83b79",
+    "uncommitted_changes": false
+  },
+  "environment": {
+    "python": "3.12.14",
+    "platform": "macOS-26.4.1-arm64-arm-64bit",
+    "requests": "2.34.2",
+    "pyproj": "3.8.0",
+    "shapely": "2.2.0"
+  },
+  "config": {
+    "service_order": [
+      "https://overpass-api.de/api/interpreter",
+      "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+      "https://overpass.private.coffee/api/interpreter"
+    ],
+    "server_timeout_s": 180,
+    "client_connect_timeout_s": 30,
+    "client_read_timeout_s": 240,
+    "retry_waits_s": [
+      30,
+      120
+    ],
+    "retry_statuses": [
+      406,
+      429,
+      502,
+      503,
+      504
+    ],
+    "max_source_age_h": 72,
+    "max_pair_source_gap_h": 24,
+    "max_pair_duration_h": 24,
+    "min_core_segments": 500,
+    "user_agent": "UDEA-UDE5014CM-bicycle-collector/0.2 (student 50000310; coursework)"
+  },
+  "pairs_tried": [
+    {
+      "service_no": 1,
+      "endpoint": "https://overpass-api.de/api/interpreter",
+      "cities": {
+        "Amsterdam": {
+          "city": "Amsterdam",
+          "endpoint": "https://overpass-api.de/api/interpreter",
+          "http_status": 200,
+          "request_utc": "2026-10-28T06:56:24Z",
+          "response_utc": "2026-10-28T06:57:00Z",
+          "source_ts": "2026-10-28T06:55:48Z",
+          "query": "[out:json][timeout:180];\n(\n  way[\"highway\"=\"cycleway\"](52.326976,4.816949,52.419182,4.967600);\n  way[\"highway\"~\"^(path|footway)$\"][\"bicycle\"=\"designated\"](52.326976,4.816949,52.419182,4.967600);\n  way[\"highway\"][\"cycleway\"~\"^(lane|track)$\"](52.326976,4.816949,52.419182,4.967600);\n  way[\"highway\"][\"cycleway:both\"~\"^(lane|track)$\"](52.326976,4.816949,52.419182,4.967600);\n  way[\"highway\"][\"cycleway:left\"~\"^(lane|track)$\"](52.326976,4.816949,52.419182,4.967600);\n  way[\"highway\"][\"cycleway:right\"~\"^(lane|track)$\"](52.326976,4.816949,52.419182,4.967600);\n  way[\"highway\"][\"cyclestreet\"=\"yes\"](52.326976,4.816949,52.419182,4.967600);\n  way[\"highway\"][\"bicycle_road\"=\"yes\"](52.326976,4.816949,52.419182,4.967600);\n)->.e;\n.e out count;\n.e out body geom;",
+          "query_sha256": "d02b5fba39b841ccdcd5ad68122365a139ef6ade0d86456fdfc8b19b92af34b8",
+          "raw_file": "raw_Amsterdam_1.json.gz",
+          "response_sha256": "b9c145a2c5f3be26cb95dad894a59ec2e8b93d789b4314d9cc5510062ab481e4",
+          "response_bytes": 6663385,
+          "envelope_SWNE": [
+            52.326976,
+            4.816949,
+            52.419182,
+            4.9676
+          ],
+          "completeness": {
+            "C1_http_200": true,
+            "C2_json_parsed": true,
+            "C3_no_runtime_remark": true,
+            "C4_source_timestamp": true,
+            "C5_count_matches": true,
+            "C6_way_structure": true,
+            "C7_within_envelope": true
+          },
+          "eligible_ways": 7713,
+          "core_segments_upper": 7360,
+          "core_segments_lower": 3328,
+          "L_km": 421.15,
+          "primary_P_U_X_km": {
+            "P": 367.35,
+            "U": 53.78,
+            "X": 0.02
+          },
+          "primary_P_U_X_pct": {
+            "P": 87.2,
+            "U": 12.8,
+            "X": 0.0
+          },
+          "known_share_pct": 100.0,
+          "protected_ratio_P_over_PU_pct": 87.2,
+          "length_by_category_km": {
+            "crossing": 1.87,
+            "cycle_street": 7.71,
+            "road_lane": 44.22,
+            "road_track": 2.3,
+            "separate_path": 362.11,
+            "shared_path": 2.94
+          },
+          "crossing_share_of_L_pct": 0.4,
+          "P_pct_excluding_crossings": 87.6,
+          "routing_link_km_excluded_from_L": 0.01
+        },
+        "Copenhagen": {
+          "city": "Copenhagen",
+          "endpoint": "https://overpass-api.de/api/interpreter",
+          "http_status": 200,
+          "request_utc": "2026-10-28T06:57:01Z",
+          "response_utc": "2026-10-28T06:57:34Z",
+          "source_ts": "2026-10-28T06:55:48Z",
+          "query": "[out:json][timeout:180];\n(\n  way[\"highway\"=\"cycleway\"](55.629616,12.485989,55.722538,12.650429);\n  way[\"highway\"~\"^(path|footway)$\"][\"bicycle\"=\"designated\"](55.629616,12.485989,55.722538,12.650429);\n  way[\"highway\"][\"cycleway\"~\"^(lane|track)$\"](55.629616,12.485989,55.722538,12.650429);\n  way[\"highway\"][\"cycleway:both\"~\"^(lane|track)$\"](55.629616,12.485989,55.722538,12.650429);\n  way[\"highway\"][\"cycleway:left\"~\"^(lane|track)$\"](55.629616,12.485989,55.722538,12.650429);\n  way[\"highway\"][\"cycleway:right\"~\"^(lane|track)$\"](55.629616,12.485989,55.722538,12.650429);\n  way[\"highway\"][\"cyclestreet\"=\"yes\"](55.629616,12.485989,55.722538,12.650429);\n  way[\"highway\"][\"bicycle_road\"=\"yes\"](55.629616,12.485989,55.722538,12.650429);\n)->.e;\n.e out count;\n.e out body geom;",
+          "query_sha256": "3b45185272a6e0dc7bea3bda211dbde5fe923f15a07cb8b4bd4fcc5d7fa48719",
+          "raw_file": "raw_Copenhagen_1.json.gz",
+          "response_sha256": "be17a951e3c7c4fc46ca9b76f531b38b8a4ca62e71f6a273d472203fe4765862",
+          "response_bytes": 4327591,
+          "envelope_SWNE": [
+            55.629616,
+            12.485989,
+            55.722538,
+            12.650429
+          ],
+          "completeness": {
+            "C1_http_200": true,
+            "C2_json_parsed": true,
+            "C3_no_runtime_remark": true,
+            "C4_source_timestamp": true,
+            "C5_count_matches": true,
+            "C6_way_structure": true,
+            "C7_within_envelope": true
+          },
+          "eligible_ways": 4841,
+          "core_segments_upper": 4424,
+          "core_segments_lower": 2024,
+          "L_km": 381.0,
+          "primary_P_U_X_km": {
+            "P": 348.29,
+            "U": 32.71,
+            "X": 0
+          },
+          "primary_P_U_X_pct": {
+            "P": 91.4,
+            "U": 8.6,
+            "X": 0.0
+          },
+          "known_share_pct": 100.0,
+          "protected_ratio_P_over_PU_pct": 91.4,
+          "length_by_category_km": {
+            "crossing": 1.52,
+            "cycle_street": 5.8,
+            "road_lane": 25.39,
+            "road_track": 195.79,
+            "separate_path": 108.44,
+            "shared_path": 44.06
+          },
+          "crossing_share_of_L_pct": 0.4,
+          "P_pct_excluding_crossings": 91.8,
+          "routing_link_km_excluded_from_L": 0.05
+        }
+      },
+      "pair_checks": {
+        "P1_same_endpoint": true,
+        "P2_both_complete": true,
+        "P3_both_fresh_72h": true,
+        "P4_source_gap_24h": true,
+        "P5_pair_within_24h": true,
+        "P6_coverage_500": true,
+        "PAIR_VALID": true
+      }
+    }
+  ],
+  "request_log": [
+    {
+      "endpoint": "https://overpass-api.de/api/interpreter",
+      "attempt": 1,
+      "request_utc": "2026-10-28T06:56:24Z",
+      "status": 200,
+      "bytes": 6663385,
+      "response_utc": "2026-10-28T06:57:00Z",
+      "sha256": "b9c145a2c5f3be26cb95dad894a59ec2e8b93d789b4314d9cc5510062ab481e4"
+    },
+    {
+      "endpoint": "https://overpass-api.de/api/interpreter",
+      "attempt": 1,
+      "request_utc": "2026-10-28T06:57:01Z",
+      "status": 200,
+      "bytes": 4327591,
+      "response_utc": "2026-10-28T06:57:34Z",
+      "sha256": "be17a951e3c7c4fc46ca9b76f531b38b8a4ca62e71f6a273d472203fe4765862"
+    }
+  ]
+}
