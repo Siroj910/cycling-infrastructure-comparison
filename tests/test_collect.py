@@ -56,6 +56,7 @@ def test_writes_snapshot_and_provenance_to_data(tmp_path):
     saved = json.load(open(os.path.join(out, "provenance.json")))
     assert saved["purpose"] == "ASSESSED POST-APPROVAL COLLECTION"
     assert saved["pair_no"] == 1 and "git_commit" in saved["code"]
+    assert saved["environment"]["python"] and saved["environment"]["requests"]
     for city, rec in saved["pairs_tried"][0]["cities"].items():
         # full query kept, and its hash matches
         assert rec["query"].startswith("[out:json]")

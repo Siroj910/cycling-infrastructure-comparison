@@ -12,7 +12,7 @@ The collection rules are imported unchanged from the approved collector
 (feasibility_pair, checks, classify, config); only the output location and the
 provenance record differ.
 """
-import argparse, gzip, hashlib, json, os, subprocess, sys
+import argparse, gzip, hashlib, json, os, platform, subprocess, sys
 from datetime import datetime
 
 from . import config as C
@@ -42,6 +42,13 @@ def code_version() -> dict:
     except (OSError, subprocess.SubprocessError):
         commit, dirty = "unknown", None
     return {"git_commit": commit, "uncommitted_changes": dirty}
+
+
+def environment() -> dict:
+    """Interpreter, OS and library versions used for the run (reproducibility)."""
+    import pyproj, requests, shapely
+    return {"python": platform.python_version(), "platform": platform.platform(),
+            "requests": requests.__version__, "pyproj": pyproj.__version__, "shapely": shapely.__version__}
 
 
 def collect(endpoints, root=DATA_ROOT, pair_no=None, fetcher=None):
@@ -102,6 +109,7 @@ def collect(endpoints, root=DATA_ROOT, pair_no=None, fetcher=None):
         "pair_valid": valid is not None,
         "valid_endpoint": valid["endpoint"] if valid else None,
         "code": code_version(),
+        "environment": environment(),
         "config": {"service_order": list(endpoints), "server_timeout_s": C.SERVER_TIMEOUT_S,
                    "client_connect_timeout_s": C.CLIENT_CONNECT_TIMEOUT_S,
                    "client_read_timeout_s": C.CLIENT_READ_TIMEOUT_S, "retry_waits_s": C.RETRY_WAITS_S,
