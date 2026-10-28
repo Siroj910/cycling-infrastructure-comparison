@@ -23,6 +23,17 @@ SHA-256, timestamps, every attempt including failures, C1-C7 / P1-P6 results, co
 Exit code 0 = valid pair, 1 = no valid pair. Failed runs are kept and committed: they are evidence too.
 Commit the code before collecting so `provenance.json` records a clean commit.
 
+## Saving to the database
+
+```
+python -m bikecollect.load --all              # or: python -m bikecollect.load data/<run_id>
+```
+
+Builds `data/bikecollect.sqlite` (git-ignored; always rebuilt from the raw snapshots) with five tables:
+`provenance`, `sources`, `snapshots`, `source_features`, `quality_events`. Each raw file is checked against its
+SHA-256 in `provenance.json` before loading; a mismatch is logged and that snapshot is refused. Re-loading a run
+does nothing.
+
 ## Feasibility run (pre-approval, not assessed)
 
 `feasibility/20261026T142511Z/` holds the paired test from 26 Oct 2026. It is never moved into `data/` or used in
