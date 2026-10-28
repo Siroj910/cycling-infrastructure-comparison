@@ -1,0 +1,205 @@
+{
+  "run_id": "20261026T142511Z",
+  "purpose": "PRE-APPROVAL FEASIBILITY ONLY - not assessed data",
+  "pairs_tried": [
+    {
+      "endpoint": "https://overpass-api.de/api/interpreter",
+      "cities": {
+        "Amsterdam": {
+          "city": "Amsterdam",
+          "endpoint": "https://overpass-api.de/api/interpreter",
+          "request_utc": null,
+          "response_utc": null,
+          "source_ts": null,
+          "query_sha256": "d02b5fba39b841ccdcd5ad68122365a139ef6ade0d86456fdfc8b19b92af34b8",
+          "response_sha256": null,
+          "envelope_SWNE": [
+            52.326976,
+            4.816949,
+            52.419182,
+            4.9676
+          ],
+          "completeness": {
+            "C1_http_200": false,
+            "C2_json_parsed": false,
+            "C3_no_runtime_remark": false,
+            "C4_source_timestamp": false,
+            "C5_count_matches": false,
+            "C6_way_structure": false,
+            "C7_within_envelope": false
+          }
+        }
+      },
+      "pair_checks": {
+        "PAIR_VALID": false,
+        "note": "a request failed"
+      }
+    },
+    {
+      "endpoint": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+      "cities": {
+        "Amsterdam": {
+          "city": "Amsterdam",
+          "endpoint": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+          "request_utc": "2026-10-26T14:27:42Z",
+          "response_utc": "2026-10-26T14:27:58Z",
+          "source_ts": "2026-10-26T14:26:34Z",
+          "query_sha256": "d02b5fba39b841ccdcd5ad68122365a139ef6ade0d86456fdfc8b19b92af34b8",
+          "response_sha256": "79e46b683e4242308581f85bf89b68893df8c0e899bd865527ef2f5f562ae5bc",
+          "envelope_SWNE": [
+            52.326976,
+            4.816949,
+            52.419182,
+            4.9676
+          ],
+          "completeness": {
+            "C1_http_200": true,
+            "C2_json_parsed": true,
+            "C3_no_runtime_remark": true,
+            "C4_source_timestamp": true,
+            "C5_count_matches": true,
+            "C6_way_structure": true,
+            "C7_within_envelope": true
+          },
+          "eligible_ways": 7711,
+          "core_segments_upper": 7358,
+          "core_segments_lower": 3326,
+          "L_km": 421.12,
+          "primary_P_U_X_km": {
+            "P": 367.35,
+            "U": 53.75,
+            "X": 0.02
+          },
+          "primary_P_U_X_pct": {
+            "P": 87.2,
+            "U": 12.8,
+            "X": 0.0
+          },
+          "known_share_pct": 100.0,
+          "protected_ratio_P_over_PU_pct": 87.2,
+          "length_by_category_km": {
+            "crossing": 1.87,
+            "cycle_street": 7.71,
+            "road_lane": 44.19,
+            "road_track": 2.3,
+            "separate_path": 362.11,
+            "shared_path": 2.94
+          },
+          "crossing_share_of_L_pct": 0.4,
+          "P_pct_excluding_crossings": 87.6,
+          "routing_link_km_excluded_from_L": 0.01
+        },
+        "Copenhagen": {
+          "city": "Copenhagen",
+          "endpoint": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+          "request_utc": "2026-10-26T14:28:30Z",
+          "response_utc": "2026-10-26T14:28:57Z",
+          "source_ts": "2026-10-26T14:27:36Z",
+          "query_sha256": "3b45185272a6e0dc7bea3bda211dbde5fe923f15a07cb8b4bd4fcc5d7fa48719",
+          "response_sha256": "2d75ba5c584219503c85ed404fb3b89cc48583d946a31f95982ad895b9969792",
+          "envelope_SWNE": [
+            55.629616,
+            12.485989,
+            55.722538,
+            12.650429
+          ],
+          "completeness": {
+            "C1_http_200": true,
+            "C2_json_parsed": true,
+            "C3_no_runtime_remark": true,
+            "C4_source_timestamp": true,
+            "C5_count_matches": true,
+            "C6_way_structure": true,
+            "C7_within_envelope": true
+          },
+          "eligible_ways": 4841,
+          "core_segments_upper": 4424,
+          "core_segments_lower": 2024,
+          "L_km": 381.0,
+          "primary_P_U_X_km": {
+            "P": 348.29,
+            "U": 32.71,
+            "X": 0
+          },
+          "primary_P_U_X_pct": {
+            "P": 91.4,
+            "U": 8.6,
+            "X": 0.0
+          },
+          "known_share_pct": 100.0,
+          "protected_ratio_P_over_PU_pct": 91.4,
+          "length_by_category_km": {
+            "crossing": 1.52,
+            "cycle_street": 5.8,
+            "road_lane": 25.39,
+            "road_track": 195.79,
+            "separate_path": 108.44,
+            "shared_path": 44.06
+          },
+          "crossing_share_of_L_pct": 0.4,
+          "P_pct_excluding_crossings": 91.8,
+          "routing_link_km_excluded_from_L": 0.05
+        }
+      },
+      "pair_checks": {
+        "P1_same_endpoint": true,
+        "P2_both_complete": true,
+        "P3_both_fresh_72h": true,
+        "P4_source_gap_24h": true,
+        "P5_pair_within_24h": true,
+        "P6_coverage_500": true,
+        "PAIR_VALID": true
+      }
+    }
+  ],
+  "request_log": [
+    {
+      "endpoint": "https://overpass-api.de/api/interpreter",
+      "attempt": 1,
+      "request_utc": "2026-10-26T14:25:11Z",
+      "error": "SSLError: HTTPSConnectionPool(host='overpass-api.de', port=443): Max retries exceeded with url: /api/interpreter (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSH",
+      "response_utc": "2026-10-26T14:25:12Z"
+    },
+    {
+      "endpoint": "https://overpass-api.de/api/interpreter",
+      "attempt": 2,
+      "request_utc": "2026-10-26T14:25:42Z",
+      "error": "SSLError: HTTPSConnectionPool(host='overpass-api.de', port=443): Max retries exceeded with url: /api/interpreter (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSH",
+      "response_utc": "2026-10-26T14:25:42Z"
+    },
+    {
+      "endpoint": "https://overpass-api.de/api/interpreter",
+      "attempt": 3,
+      "request_utc": "2026-10-26T14:27:42Z",
+      "error": "SSLError: HTTPSConnectionPool(host='overpass-api.de', port=443): Max retries exceeded with url: /api/interpreter (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSH",
+      "response_utc": "2026-10-26T14:27:42Z"
+    },
+    {
+      "endpoint": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+      "attempt": 1,
+      "request_utc": "2026-10-26T14:27:42Z",
+      "status": 200,
+      "bytes": 6661325,
+      "response_utc": "2026-10-26T14:27:58Z",
+      "sha256": "79e46b683e4242308581f85bf89b68893df8c0e899bd865527ef2f5f562ae5bc"
+    },
+    {
+      "endpoint": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+      "attempt": 1,
+      "request_utc": "2026-10-26T14:27:59Z",
+      "status": 504,
+      "bytes": 160,
+      "response_utc": "2026-10-26T14:28:00Z",
+      "sha256": "c9c89d274726b86306e1c97d80360f820bce86042c34c9bb2487aac4ada6d606"
+    },
+    {
+      "endpoint": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+      "attempt": 2,
+      "request_utc": "2026-10-26T14:28:30Z",
+      "status": 200,
+      "bytes": 4327527,
+      "response_utc": "2026-10-26T14:28:57Z",
+      "sha256": "2d75ba5c584219503c85ed404fb3b89cc48583d946a31f95982ad895b9969792"
+    }
+  ]
+}
